@@ -1,0 +1,17 @@
+.container-card-startup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.card-startup{
+    background-color: #f7f6f6;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-startup-card{
+    margin-top: 20px;
+    /* width: 200px; */
+}
