@@ -6,8 +6,7 @@ import { Component, Input } from "@angular/core";
   styleUrls: ['./startupcard.component.css']
 })
 export class StartupCardComponent {
-     @Input() url = '';
-     @Input() nome = '';
-     @Input() segmento = '';
+     @Input() imageUrl = '';
+     @Input() name = '';
 
 }
