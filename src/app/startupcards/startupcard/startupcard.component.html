@@ -1,10 +1,14 @@
-<div class="container container-card-startup">
+<div *ngFor="let startup of startups | async">
+  <div class="container container-card-startup">
     <div class="card text-center card-startup" style="width: 18rem">
-      <img class="card-img-top img-startup-card img-thumbnail" [src]="imageUrl" alt="Card image cap">
+      <img class="card-img-top img-startup-card img-thumbnail" src="{{startup.imageUrl}}" alt="Card image cap">
       <div class="card-body">
-        <h3 class="card-title font-weight-bold">{{name}}</h3>
-        <p class="card-text">segmento</p>
+        <h3 class="card-title font-weight-bold">{{startup.name}}</h3>
+        <p class="card-text">{{startup.segment}}</p>
         <a href="#" class="btn btn-primary">Votar</a>
       </div>
     </div>
   </div>
+</div>
+
+
