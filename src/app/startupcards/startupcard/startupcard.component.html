@@ -9,8 +9,8 @@
     </div>
   </div>
   
-  <div class="row row-card-startup"> 
-    <div *ngFor="let startup of startups | async let i=index" class="card card-startup accordion" clas="col-md-6 flex-center" [attr.id]="'heid'+ i" style="width: 18rem">
+  <div class="row-card-startup"> 
+    <div *ngFor="let startup of startups | async let i=index" class="card card-startup accordion" clas="col flex-center" [attr.id]="'heid'+ i" style="width: 18rem">
       <div class="accordion-group">
         <img data-toggle="collapse" [attr.data-parent]="'#colid'+ i" [attr.href]="'#colid'+ i"  [attr.aria-controls]="'colid'+ i" class=" accordion-toggle card-img-top img-thumbnail img-startup-card" src={{startup.imageUrl}} alt="Card image cap">
         <div class="card-body card-head-startup">
