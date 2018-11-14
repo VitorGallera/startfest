@@ -1,0 +1,43 @@
+.rating {
+    width: 200px;
+height: 30px;
+}
+.rating span { float:right; position:relative; }
+.rating span input {
+position:absolute;
+top:0px;
+left:0px;
+opacity:0;
+}
+.rating span label {
+display: inline-block;
+width: 30px;
+height: 30px;
+text-align: center;
+color: #FFF;
+/*background: #ccc;*/
+font-size: 30px;
+margin-right: 2px;
+line-height: 30px;
+/* border-radius: 50%; */
+/* -webkit-border-radius: 50%; */
+background-image: url(../../../assets/images/star.png);
+background-position: center;
+background-repeat: no-repeat, repeat;
+}
+.rating span:hover ~ span label,
+.rating span:hover label,
+.rating span.checked label,
+.rating span.checked ~ span label {
+background-image: url(../../../assets/images/stargold.png);
+background-position: center;
+background-repeat: no-repeat, repeat;
+}
+
+
+.row-btn-vote{
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}

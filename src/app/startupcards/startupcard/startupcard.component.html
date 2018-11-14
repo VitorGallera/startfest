@@ -1,14 +1,61 @@
-<div *ngFor="let startup of startups | async">
-  <div class="container container-card-startup">
-    <div class="card text-center card-startup" style="width: 18rem">
-      <img class="card-img-top img-startup-card img-thumbnail" src="{{startup.imageUrl}}" alt="Card image cap">
-      <div class="card-body">
-        <h3 class="card-title font-weight-bold">{{startup.name}}</h3>
-        <p class="card-text">{{startup.segment}}</p>
-        <a href="#" class="btn btn-primary">Votar</a>
+<div class="container container-card-startup">
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron titulo-escolha">
+        <div class="container">
+          <h1 class="display-5 text-center">Escolha sua Startup!</h1>
+        </div>
       </div>
     </div>
   </div>
+  
+  <div class="row row-card-startup"> 
+    <div *ngFor="let startup of startups | async let i=index" class="card card-startup accordion" clas="col-md-6 flex-center" [attr.id]="'heid'+ i" style="width: 18rem">
+      <div class="accordion-group">
+        <img data-toggle="collapse" [attr.data-parent]="'#colid'+ i" [attr.href]="'#colid'+ i"  [attr.aria-controls]="'colid'+ i" class=" accordion-toggle card-img-top img-thumbnail img-startup-card" src={{startup.imageUrl}} alt="Card image cap">
+        <div class="card-body card-head-startup">
+          <h3 class="card-title text-center startup-title">{{startup.name}}</h3>
+        </div>
+        <div class="card-body card-body-startup">
+          <div class="panel-collapse collapse" [attr.aria-labelledby]="'heid'+ i"  [attr.id]="'colid'+ i">
+            <div class="card-description">
+              <hr class=" hr-title-description">
+              <p class="description-text">{{startup.description}}</p>
+            </div>
+            <div class="">
+              <h3 class="vote-title text-center">Proposta</h3>
+              <ap-proposta></ap-proposta>
+              <div class="">
+                <p class="vote-description">A ideia / proposta agradou te agradou? Você se sentiu impactado?</p>
+              </div>
+            </div>
+            <div class="">
+              <h3 class="vote-title text-center">Apresentação / Pitch</h3>
+              <ap-proposta></ap-proposta>
+              <div class="">
+                <p class="vote-description">A startup soube demonstrar a sua proposta de maneira clara e objetiva?</p>
+              </div>
+            </div>
+            <div class="">
+              <h3 class="vote-title text-center">Desenvolvimento</h3>
+              <ap-proposta></ap-proposta>
+              <div class="">
+                <p class="vote-description">No estagio atual do produto / serviço, atende bem a proposta?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
 
 

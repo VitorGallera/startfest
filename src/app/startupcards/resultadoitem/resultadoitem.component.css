@@ -1,0 +1,43 @@
+.titulo-resultados{
+	margin: 40px;
+	font-size: 2.4rem;
+}
+.titulo-escolha{
+	margin-bottom: 0;
+	border: none;
+	border-radius: 0px;
+}
+.flex-center{
+	display: flex;
+	justify-content: center;
+}
+
+.card-resultado{
+	margin-bottom: 20px;
+}
+.img-card-resultado{
+	padding: 0; 
+	border-radius: 0; 
+   
+}
+.titulo-position{
+
+display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.nota-content{
+	    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card-body-resultado{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.titulo-tipo{
+	margin:20px;
+}

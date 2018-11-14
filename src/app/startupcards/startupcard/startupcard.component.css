@@ -1,13 +1,87 @@
-.container-card-startup{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
 .card-startup{
     background-color: #f7f6f6;   
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-box-shadow: 10px 10px 15px -8px rgba(0,0,0,0.53);
+	-moz-box-shadow: 10px 10px 15px -8px rgba(0,0,0,0.53);
+	box-shadow: 10px 10px 15px -8px rgba(0,0,0,0.53);
+	margin-bottom: 40px;
+}
+.img-startup-card{
+    border: none;
+    border-radius: 0; 
+    padding: 0; 
+}
+.card-head-startup{
+	width: 100%;
+	padding-bottom: 0;
+}
+.startup-title{
+	margin-bottom: 0;
+}
+.card-body-startup{
+	width: 100%;
+	padding-top: 10px;
+
+}
+.hr-title-description{
+	border-top: 1px solid rgba(0,0,0,.4);
+	margin-top: 0;
+    margin-bottom: 10px;
+    width: 20%;
+    margin-left: 0px;
 }
 
+
+.vote-title{
+	font-size: 1.75rem;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.vote-description{
+    text-align: center;
+    padding: 20px;
+}
+
+
+.description-text{
+	font-style: italic;
+	margin-top: 0rem;
+	padding: 10px;
+    text-align: justify;
+}
+.col-btn-vote{
+	display: flex;
+    justify-content: center;
+}
+
+.flex-center{
+	display: flex;
+	justify-content: center;
+}
+.titulo-escolha{
+	margin-bottom: 0;
+	border: none;
+	border-radius: 0px;
+}
+
+.row-card-startup{
+justify-content: center;
+}
+
+@media (min-width: 576px) {  }
+
+
+@media (min-width: 768px) {
+	.card-startup{
+		margin-right: 20px;
+	}
+}
+
+
+@media (min-width: 992px) {  }
+
+
+@media (min-width: 1200px) {  }

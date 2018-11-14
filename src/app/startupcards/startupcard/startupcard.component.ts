@@ -5,6 +5,8 @@ import { map } from 'rxjs/operators';
 import gql from 'graphql-tag';
 import { Startup , Query } from '../../types';
 
+
+
 @Component({
   selector: 'ap-startupcard',
   templateUrl: './startupcard.component.html',
@@ -12,7 +14,11 @@ import { Startup , Query } from '../../types';
 })
 export class StartupCardComponent implements OnInit {
   startups: Observable<Startup[]>;
-  constructor(private apollo: Apollo) { }
+  
+  constructor(private apollo: Apollo) {
+    
+  }
+
   ngOnInit() {
     this.startups = this.apollo.watchQuery<Query>({
       query: gql`
@@ -20,14 +26,17 @@ export class StartupCardComponent implements OnInit {
           allStartups{
             name
             imageUrl
+            description
           }
         }
       `
     })
+    
       .valueChanges
       .pipe(
-        map(result => result.data.allStartups)
+        map(result => result.data.allStartups )
       );
+
   }
 }
 

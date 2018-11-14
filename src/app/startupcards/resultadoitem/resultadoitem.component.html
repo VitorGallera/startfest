@@ -1,0 +1,82 @@
+<div class=container>
+    <div class="row">
+        <div class=col>
+            <div class="titulo-resultados">
+                <h1 class=" text-center">Resutados da votação!</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="titulo-tipo">
+                <h2 class="display- text-center titulo-tipo">Proposta</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div *ngFor="let resultadop of resultadosProposta | async let i=index" class="col-sm-12 flex-center">
+            <div class="card card-resultado" style="width: 18rem;height: 450px;">
+                <img class="img-thumbnail img-card-resultado" src="{{resultadop.url}}" alt="Card image cap">
+                <div class="card-body card-body-resultado">
+                    <div class="titulo-position">
+                        <h3>{{resultadop.name}}</h3>
+                        <h3>{{i + 1}}º</h3>
+                    </div>
+                    <div class="nota-content">
+                        <p>{{resultadop.name}} se destaca:</p>
+                        <h2>{{resultadop.mediaA}}/5</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="titulo-tipo">
+                <h2 class="display- text-center titulo-tipo">Apresentação</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row"> 
+        <div *ngFor="let resultadoa of resultadosApresentacao | async let i=index" class="col-sm-12 flex-center">
+            <div class="card card-resultado" style="width: 18rem;height: 450px;">
+                <img class="img-thumbnail img-card-resultado" src="{{resultadoa.url}}" alt="Card image cap">
+                <div class="card-body card-body-resultado">
+                    <div class="titulo-position">
+                        <h3>{{resultadoa.name}}</h3>
+                        <h3>{{i + 1}}º</h3>
+                    </div>
+                    <div class="nota-content">
+                        <p>{{resultadoa.name}} se destaca:</p>
+                        <h2>{{resultadoa.mediaA}}/5</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="titulo-tipo">
+                <h2 class="display- text-center titulo-tipo">Desenvolvimento</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row"> 
+        <div *ngFor="let resultadod of resultadosDesenvolvimento | async let i=index" class="col-sm-12 flex-center">
+            <div class="card card-resultado" style="width: 18rem;height: 450px;">
+                <img class="img-thumbnail img-card-resultado" src="{{resultadod.url}}" alt="Card image cap">
+                <div class="card-body card-body-resultado">
+                    <div class="titulo-position">
+                        <h5 >{{resultadod.name}}</h5>
+                        <h3>{{i + 1}}º</h3>
+                    </div>
+                    <div class="nota-content">
+                        <p>{{resultadod.name}} se destaca:</p>
+                        <h2>{{resultadod.mediaA}}/5</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
